@@ -7,6 +7,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -38,6 +40,5 @@ jobs:
          
       - name : Installing surge 
         run : npm install -g surge 
-        
-      - name : Deploying on surge 
+      - name : Deploying on surge
         run : surge ./build http://react-hello-world-with-github-action.surge.sh/ --token ${{secrets.SURGETOKEN}}
