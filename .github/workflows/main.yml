@@ -35,6 +35,10 @@ jobs:
         with:
           # Yarn command
           cmd: install 
+          
+      - name: GitHub Action for Yarn
+        run: npm install -g yarn  
+          
       - name : Creating build 
         run : yarn build
          
