@@ -41,8 +41,10 @@ jobs:
       - name: Creating build
         run: yarn build
         
+      - name : Installing surge 
+        run : npm install -g surge
           
-      - name: Installing surge 
+      - name: Deploying surge 
         run: surge ./build http://react-hello-world-with-github-action.surge.sh/ --token ${{secrets.SURGETOKEN}} 
 
        
