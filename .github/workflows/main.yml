@@ -40,7 +40,7 @@ jobs:
         run: npm install -g yarn  
           
       - name : Creating build 
-        run : yarn build
+        run : npm run build
          
       - name : Installing surge 
         run : npm install -g surge 
